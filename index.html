@@ -8,41 +8,18 @@
  </head> 
  <body> 
   <h1>Adivinhe o número</h1> 
-  <p id="textoInfo">Chute um número de 1-10</p>
-  <label for="num">Qual é o seu palpite?</label> 
-  <br> 
-  <input type="number" id="num"> 
-  <br> 
-  <input type="submit" id="btnNum"> 
-  <br> 
-  <p id="nTentativa"></p> 
+   <p id="textoInfo">Chute um número de 1-10</p>
+   <label for="num">Qual é o seu palpite?</label> 
+     <br> 
+   <input type="number" id="num"> 
+     <br> 
+   <input type="submit" id="btnNum"> 
+     <br> 
+   <p id="nTentativa"></p> 
   <footer> 
    <p id="texto1">Versão Mobile.<br>Feito em um celular.</p>  
    <p id="texto2">© Criado por Munique Feitoza.</p> 
   </footer> 
   <script src="index.js"></script> 
- 
-<script type="text/javascript" id="dcoder_script">let resposta = Math.floor(Math.random() * 10 + 1);
-let btn = document.getElementById("btnNum");
-let tentativa = 0;
-let texto = document.getElementById("nTentativa");
-
-btn.onclick = () => {
-  let palpite = document.getElementById("num").value;
-  
-  if(palpite == "" || palpite > 10 || palpite < 1) {
-    texto.innerHTML = `Por favor insira um número
-    de 1 até 10!!!`
-  } else if(resposta == palpite) {
-    texto.innerHTML = `Parabéns você acertou o número ${resposta}!
-     Número de chutes: ${tentativa}`;
-  } else if(resposta < palpite) {
-    texto.innerHTML = `Chutou alto!
-     Número de chutes: ${tentativa}`;
-  } else {
-    texto.innerHTML = `Chutou baixo!
-     Número de chutes: ${tentativa}` 
-  }
-  
-  tentativa++;
-}</script></body></html>
+ </body>
+</html>
